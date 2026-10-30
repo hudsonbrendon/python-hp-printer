@@ -1,0 +1,216 @@
+{
+	"version": "1.4.0",
+	"services": [ 
+	{
+		"version": "1.0.0",
+		"serviceGun": "com.hp.cdm.service.eventing.version.1",
+		"description": "telemetry service",
+		"links": [ 
+		{
+			"rel": "capabilities",
+			"href": "/cdm/telemetry/v1/eventing/eventCapabilities",
+			"hints": [ 
+			{
+				"method": "get"
+			} ]
+
+		},
+		{
+			"rel": "events",
+			"href": "/cdm/telemetry/v1/eventing/events",
+			"hints": [ 
+			{
+				"method": "get"
+			} ]
+		} ]
+
+	},
+	{
+		"version": "1.0.0",
+		"serviceGun": "com.hp.cdm.service.remoteAuthentication.version.1",
+		"description": "remoteAuthentication",
+		"links": [ 
+		{
+			"rel": "capabilities",
+			"href": "/cdm/remoteAuthentication/v1/capabilities",
+			"hints": [ 
+			{
+				"method": "get"
+			} ]
+
+		},
+		{
+			"rel": "config",
+			"href": "/cdm/remoteAuthentication/v1/config",
+			"hints": [ 
+			{
+				"method": "get"
+
+			},
+			{
+				"method": "put"
+			} ]
+
+		},
+		{
+			"rel": "pushbuttons",
+			"href": "/cdm/remoteAuthentication/v1/pushbuttons",
+			"hints": [ 
+			{
+				"method": "post"
+			} ]
+
+		},
+		{
+			"rel": "tokens",
+			"href": "/cdm/remoteAuthentication/v1/tokens",
+			"hints": [ 
+			{
+				"method": "post"
+
+			},
+			{
+				"method": "delete"
+			} ]
+		} ]
+
+	},
+	{
+		"version": "1.0.0",
+		"serviceGun": "com.hp.cdm.service.awc.version.1",
+		"description": "awc",
+		"links": [ 
+		{
+			"rel": "signedPublicKey",
+			"href": "/cdm/awc/v1/signedPublicKey",
+			"state": "unavailable",
+			"stateReason": "inactivated",
+			"hints": [ 
+			{
+				"method": "get"
+			} ]
+
+		},
+		{
+			"rel": "wirelessConfiguration",
+			"href": "/cdm/awc/v1/wirelessConfiguration",
+			"state": "unavailable",
+			"stateReason": "inactivated",
+			"hints": [ 
+			{
+				"method": "put"
+			} ]
+
+		},
+		{
+			"rel": "capabilities",
+			"href": "/cdm/awc/v1/capabilities",
+			"state": "unavailable",
+			"stateReason": "inactivated",
+			"hints": [ 
+			{
+				"method": "get"
+			} ]
+
+		},
+		{
+			"rel": "printerDiscovery",
+			"href": "/cdm/awc/v1/printerDiscovery",
+			"state": "unavailable",
+			"stateReason": "inactivated",
+			"hints": [ 
+			{
+				"method": "get"
+			} ]
+
+		},
+		{
+			"rel": "state",
+			"href": "/cdm/awc/v1/state",
+			"state": "unavailable",
+			"stateReason": "inactivated",
+			"hints": [ 
+			{
+				"method": "get"
+			} ]
+		} ]
+
+	},
+	{
+		"version": "1.0.0",
+		"serviceGun": "com.hp.cdm.service.print.version.1",
+		"description": "print",
+		"links": [ 
+		{
+			"rel": "printModeConfiguration",
+			"href": "/cdm/print/v1/printModeConfiguration",
+			"hints": [ 
+			{
+				"method": "get"
+
+			},
+			{
+				"method": "put"
+			} ]
+
+		},
+		{
+			"rel": "printModeConstraints",
+			"href": "/cdm/print/v1/printModeConfiguration/constraints",
+			"hints": [ 
+			{
+				"method": "get"
+			} ]
+
+		},
+		{
+			"rel": "mediaConfiguration",
+			"href": "/cdm/print/v1/mediaConfiguration",
+			"hints": [ 
+			{
+				"method": "get"
+
+			},
+			{
+				"method": "put"
+			} ]
+
+		},
+		{
+			"rel": "mediaConstraints",
+			"href": "/cdm/print/v1/mediaConfiguration/constraints",
+			"hints": [ 
+			{
+				"method": "get"
+			} ]
+		} ]
+
+	},
+	{
+		"version": "1.0.0",
+		"serviceGun": "com.hp.cdm.service.controlPanel.version.1",
+		"description": "controlPanel",
+		"links": [ 
+		{
+			"rel": "configuration",
+			"href": "/cdm/controlPanel/v1/configuration",
+			"hints": [ 
+			{
+				"method": "get"
+
+			},
+			{
+				"method": "put"
+			} ]
+
+		},
+		{
+			"rel": "controlPanelConstraints",
+			"href": "/cdm/controlPanel/v1/configuration/constraints",
+			"hints": [ 
+			{
+				"method": "get"
+			} ]
+		} ]
+	} ]
+}

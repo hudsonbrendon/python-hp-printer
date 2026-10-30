@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--THIS DATA SUBJECT TO DISCLAIMER(S) INCLUDED WITH THE PRODUCT OF ORIGIN.-->
+<prncfgcap2:PrintConfigCap xmlns:prncfgdyn="http://www.hp.com/schemas/imaging/con/ledm/printconfigdyn/2007/11/02" xmlns:prncfgcap="http://www.hp.com/schemas/imaging/con/ledm/printconfigcap/2007/11/2" xmlns:prncfgcap2="http://www.hp.com/schemas/imaging/con/ledm/printconfigcap/2009/05/06" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:ledm="http://www.hp.com/schemas/imaging/con/ledm/2007/09/21" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/printconfigcap/2007/11/2 ../schemas/PrintConfigCap.xsd                       http://www.hp.com/schemas/imaging/con/ledm/printconfigcap/2009/05/06 ../schemas/ledm2/PrintConfigCap.xsd">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.786</dd:Revision>
+		<dd:Date>2014-06-19</dd:Date>
+	</dd:Version>
+	<prncfgcap:BitsPerPixel typeof="dd:NonNegativeInteger" min="0" max="32" step="1" elementXPath="prncfgdyn2:PrintConfigDyn/dd:BitsPerPixel" access="readOnly"></prncfgcap:BitsPerPixel>
+	<prncfgcap:ColorBitsPerPixel typeof="dd:NonNegativeInteger" min="0" step="1" max="32" elementXPath="prncfgdyn2:PrintConfigDyn/dd:ColorBitsPerPixel" access="readOnly"></prncfgcap:ColorBitsPerPixel>
+	<prncfgcap:DefaultPrintCopies typeof="dd:NonNegativeInteger" min="1" max="99" step="1" elementXPath="prncfgdyn2:PrintConfigDyn/dd:DefaultPrintCopies" access="readWrite"></prncfgcap:DefaultPrintCopies>
+	<prncfgcap:DefaultCourierSupport access="readWrite">
+		<dd:DefaultCourier>dark</dd:DefaultCourier>
+		<dd:DefaultCourier>regular</dd:DefaultCourier>
+	</prncfgcap:DefaultCourierSupport>
+	<prncfgcap:DefaultPDLInterpreterOrientationSupport access="readWrite">
+		<dd:DefaultPDLInterpreterOrientation>Landscape</dd:DefaultPDLInterpreterOrientation>
+		<dd:DefaultPDLInterpreterOrientation>Portrait</dd:DefaultPDLInterpreterOrientation>
+	</prncfgcap:DefaultPDLInterpreterOrientationSupport>
+	<prncfgcap:JamRecoverySupport access="readOnly">
+		<dd:JamRecovery>off</dd:JamRecovery>
+	</prncfgcap:JamRecoverySupport>
+	<prncfgcap:PrintDensitySettingsCap>
+		<prncfgcap:SupportedDefaultSettings>
+			<ledm:DefaultSetting>FactoryDefault</ledm:DefaultSetting>
+			<ledm:DefaultSetting>GroupDefault</ledm:DefaultSetting>
+		</prncfgcap:SupportedDefaultSettings>
+	</prncfgcap:PrintDensitySettingsCap>
+	<prncfgcap:ResolutionSettingSupport access="readOnly">
+		<dd:ResolutionSetting>fast300dpi</dd:ResolutionSetting>
+		<dd:ResolutionSetting>fast600dpi</dd:ResolutionSetting>
+		<dd:ResolutionSetting>fast1200dpi</dd:ResolutionSetting>
+	</prncfgcap:ResolutionSettingSupport>
+	<prncfgcap2:BorderlessPrintingSupport access="readOnly">
+		<dd:BorderlessPrinting>false</dd:BorderlessPrinting>
+		<dd:BorderlessPrinting>true</dd:BorderlessPrinting>
+	</prncfgcap2:BorderlessPrintingSupport>
+	<prncfgcap2:DefaultPrintQualitySettingSupport access="readWrite">
+		<dd:PrintQuality>Best</dd:PrintQuality>
+		<dd:PrintQuality>Draft</dd:PrintQuality>
+		<dd:PrintQuality>Normal</dd:PrintQuality>
+	</prncfgcap2:DefaultPrintQualitySettingSupport>
+	<prncfgcap:ColorLokSupport access="readWrite">
+		<prncfgdyn:ColorLok>disabled</prncfgdyn:ColorLok>
+		<prncfgdyn:ColorLok>enabled</prncfgdyn:ColorLok>
+	</prncfgcap:ColorLokSupport>
+	<prncfgcap2:JobTimeoutSupport>
+		<prncfgcap2:LeaseTime elementXPath="dd:JobTimeout/dd:LeaseTime" typeof="dd:Integer" min="5" max="300" step="1" access="readWrite"></prncfgcap2:LeaseTime>
+		<prncfgcap:TimeUnitsSupport elementXPath="dd:JobTimeout/dd:TimeUnits" access="readOnly">
+			<dd:TimeUnits>seconds</dd:TimeUnits>
+		</prncfgcap:TimeUnitsSupport>
+	</prncfgcap2:JobTimeoutSupport>
+	<prncfgcap2:InkSlidersSupport elementXPath="prncfgdyn2:PrintConfigDyn/prncfgdyn2:InkSliders" access="readOnly">
+		<prncfgcap:InkSliders>disabled</prncfgcap:InkSliders>
+		<prncfgcap:InkSliders>enabled</prncfgcap:InkSliders>
+	</prncfgcap2:InkSlidersSupport>
+</prncfgcap2:PrintConfigCap>

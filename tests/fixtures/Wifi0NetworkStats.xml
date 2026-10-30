@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- THIS DATA SUBJECT TO DISCLAIMER(S) INCLUDED WITH THE PRODUCT OF ORIGIN. -->
+<io:NetworkStats xmlns:io="http://www.hp.com/schemas/imaging/con/ledm/iomgmt/2008/11/30" xmlns:map="http://www.hp.com/schemas/imaging/con/ledm/resourcemap/2009/01/27" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:wifi="http://www.hp.com/schemas/imaging/con/wifi/2009/06/26" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/iomgmt/2008/11/30 ../../schemas/IoMgmt.xsd">
+	<dd:NetworkStatistics>
+		<dd:BadPacketsReceived>0</dd:BadPacketsReceived>
+		<dd:FramingErrorsReceived>0</dd:FramingErrorsReceived>
+		<dd:TotalPacketsReceived>233910</dd:TotalPacketsReceived>
+		<dd:TotalPacketsTransmitted>4393</dd:TotalPacketsTransmitted>
+		<dd:TransmitCollisions>0</dd:TransmitCollisions>
+		<dd:TransmitLateCollisions>0</dd:TransmitLateCollisions>
+		<dd:TotalUnicastPacketsReceived>8382</dd:TotalUnicastPacketsReceived>
+		<dd:UnsendablePackets>0</dd:UnsendablePackets>
+	</dd:NetworkStatistics>
+	<dd:NetworkStatistics2>
+		<dd:TotalBroadcastPacketsTransmitted>389</dd:TotalBroadcastPacketsTransmitted>
+		<dd:TotalBroadcastPacketsReceived>225528</dd:TotalBroadcastPacketsReceived>
+		<dd:TotalUnicastPacketsTransmitted>4004</dd:TotalUnicastPacketsTransmitted>
+	</dd:NetworkStatistics2>
+	<wifi:WirelessStatistics>
+		<wifi:DownlinkCount>64</wifi:DownlinkCount>
+	</wifi:WirelessStatistics>
+</io:NetworkStats>

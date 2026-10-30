@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- THIS DATA SUBJECT TO DISCLAIMER(S)INCLUDED WITH THE PRODUCT OF ORIGIN. -->
+<nasdyn:NetAppsSecureDyn xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/netappsecdyn/2012/11/15 ../../schemas/NetAppsSecureDyn.xsd" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:nasdyn="http://www.hp.com/schemas/imaging/con/ledm/netappsecdyn/2012/11/15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<nasdyn:Version>
+		<dd:Revision>SVN-IPG-LEDM.589</dd:Revision>
+		<dd:Date>2013-01-09</dd:Date>
+	</nasdyn:Version>
+	<nasdyn:WirelessDirectConfig>
+		<nasdyn:ShowPassPhrase>true</nasdyn:ShowPassPhrase>
+		<nasdyn:HideSSID>false</nasdyn:HideSSID>
+		<nasdyn:DisableSSIDBroadcast>false</nasdyn:DisableSSIDBroadcast>
+		<nasdyn:SSIDPrefix>DIRECT-72-HP</nasdyn:SSIDPrefix>
+		<nasdyn:ConnectionMethod>manual</nasdyn:ConnectionMethod>
+	</nasdyn:WirelessDirectConfig>
+	<nasdyn:AutoWirelessConfig>
+		<nasdyn:State>enabled</nasdyn:State>
+		<nasdyn:Status>done</nasdyn:Status>
+	</nasdyn:AutoWirelessConfig>
+	<nasdyn:AirPrintConfig>
+		<nasdyn:State>enabled</nasdyn:State>
+	</nasdyn:AirPrintConfig>
+	<nasdyn:IPPSConfig>
+		<nasdyn:State>enabled</nasdyn:State>
+	</nasdyn:IPPSConfig>
+	<nasdyn:WPADConfig>
+		<nasdyn:State>enabled</nasdyn:State>
+	</nasdyn:WPADConfig>
+	<nasdyn:RemotelyInitiatedScans>enabled</nasdyn:RemotelyInitiatedScans>
+	<nasdyn:BluetoothSmartConfig>
+		<nasdyn:State>enabled</nasdyn:State>
+	</nasdyn:BluetoothSmartConfig>
+</nasdyn:NetAppsSecureDyn>

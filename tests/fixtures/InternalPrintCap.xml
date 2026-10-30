@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  THIS DATA SUBJECT TO DISCLAIMER(S)INCLUDED WITH THE PRODUCT OF ORIGIN. -->
+<ipcap:InternalPrintCap xmlns:ipcap="http://www.hp.com/schemas/imaging/con/ledm/internalprintcap/2008/03/21" xmlns:ipdyn="http://www.hp.com/schemas/imaging/con/ledm/internalprintdyn/2008/03/21" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/internalprintcap/2008/03/21 ../schemas/InternalPrintCap.xsd http://www.hp.com/schemas/imaging/con/ledm/internalprintdyn/2008/03/21 ../schemas/InternalPrintDyn.xsd http://www.hp.com/schemas/imaging/con/dictionaries/1.0/ ../schemas/dd/DataDictionaryMasterLEDM.xsd">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.412</dd:Revision>
+		<dd:Date>2012-03-06</dd:Date>
+	</dd:Version>
+	<ipcap:JobUrl>/DevMgmt/InternalPrintDyn.xml</ipcap:JobUrl>
+	<ipcap:JobTypesSupport>
+		<ipdyn:JobType>cleaningPage</ipdyn:JobType>
+		<ipdyn:JobType>cleaningPageLevel2</ipdyn:JobType>
+		<ipdyn:JobType>cleaningVerificationPage</ipdyn:JobType>
+		<ipdyn:JobType>configurationPage</ipdyn:JobType>
+		<ipdyn:JobType>wifiDirectGuide</ipdyn:JobType>
+		<ipdyn:JobType>diagnosticsPage</ipdyn:JobType>
+		<ipdyn:JobType>extendedConfigurationPage</ipdyn:JobType>
+		<ipdyn:JobType>networkSummary</ipdyn:JobType>
+		<ipdyn:JobType>networkDiagnosticPage</ipdyn:JobType>
+		<ipdyn:JobType>wirelessNetworkPage</ipdyn:JobType>
+		<ipdyn:JobType>paperFeedCleaningPage</ipdyn:JobType>
+		<ipdyn:JobType>pqDiagnosticsPage</ipdyn:JobType>
+		<ipdyn:JobType>ribSmearCleaningPage</ipdyn:JobType>
+		<ipdyn:JobType>eventLogReport</ipdyn:JobType>
+		<ipdyn:JobType>webAccessReport</ipdyn:JobType>
+		<ipdyn:JobType>webServicesInfoPage</ipdyn:JobType>
+		<ipdyn:JobType>ePrintSetupPage</ipdyn:JobType>
+		<ipdyn:JobType>googleCloudPrintPage</ipdyn:JobType>
+	</ipcap:JobTypesSupport>
+</ipcap:InternalPrintCap>

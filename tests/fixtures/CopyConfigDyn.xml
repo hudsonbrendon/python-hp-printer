@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  THIS DATA SUBJECT TO DISCLAIMER(S)INCLUDED WITH THE PRODUCT OF ORIGIN. -->
+<cpcfgdyn:CopyConfigDyn xmlns:cpcfgdyn="http://www.hp.com/schemas/imaging/con/ledm/cpcfgdyn/2008/05/05" xmlns:copy="http://www.hp.com/schemas/imaging/con/copy/2008/07/07" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/cpcfgdyn/2008/05/05 ../schemas/CopyConfigDyn.xsd">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.122</dd:Revision>
+		<dd:Date>2011-10-18</dd:Date>
+	</dd:Version>
+	<copy:DefaultLighterDarker>4</copy:DefaultLighterDarker>
+	<copy:DefaultMediaSizeName>iso_a4_210x297mm</copy:DefaultMediaSizeName>
+	<copy:DefaultMediaType>plain</copy:DefaultMediaType>
+	<copy:DefaultNumberOfCopies>1</copy:DefaultNumberOfCopies>
+	<copy:DefaultReduceEnlarge>original</copy:DefaultReduceEnlarge>
+	<copy:DefaultReduceEnlargeCustom>100</copy:DefaultReduceEnlargeCustom>
+	<copy:DefaultTraySelect>Tray1</copy:DefaultTraySelect>
+	<copy:DefaultCopyQuality>normal</copy:DefaultCopyQuality>
+	<copy:DefaultMarginOff>enabled</copy:DefaultMarginOff>
+	<dd:CopySides>simplexToSimplex</dd:CopySides>
+	<cpcfgdyn:DefaultOutputType>monochrome</cpcfgdyn:DefaultOutputType>
+	<cpcfgdyn:DefaultInputSource>Flatbed</cpcfgdyn:DefaultInputSource>
+</cpcfgdyn:CopyConfigDyn>

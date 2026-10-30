@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!---->
+<fwudyn:FirmwareUpdate xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/firmwareupdatedyn/2010/12/12 ../../schemas/FirmwareUpdateDyn.xsd" xmlns:fwudyn="http://www.hp.com/schemas/imaging/con/ledm/firmwareupdatedyn/2010/12/12" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<fwudyn:Class>WebFWUpdate</fwudyn:Class>
+	<fwudyn:Config>
+		<fwudyn:AutomaticCheck>enabled</fwudyn:AutomaticCheck>
+		<fwudyn:AutomaticUpdate>enabled</fwudyn:AutomaticUpdate>
+	</fwudyn:Config>
+	<fwudyn:State>
+		<fwudyn:Status>idle</fwudyn:Status>
+	</fwudyn:State>
+</fwudyn:FirmwareUpdate>

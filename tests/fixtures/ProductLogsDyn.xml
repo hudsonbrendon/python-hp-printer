@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--THIS DATA SUBJECT TO DISCLAIMER(S) INCLUDED WITH THE PRODUCT OF ORIGIN.-->
+<pldyn:ProductLogsDyn xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/productlogsdyn/2008/01/16 ../schemas/ProductLogsDyn.xsd" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:pldyn="http://www.hp.com/schemas/imaging/con/ledm/productlogsdyn/2008/01/16" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.29</dd:Revision>
+		<dd:Date>2010-05-13</dd:Date>
+	</dd:Version>
+	<pldyn:EventLog>
+		<pldyn:Event>
+			<dd:SequenceNumber>1043</dd:SequenceNumber>
+			<dd:EventOccurrences>6</dd:EventOccurrences>
+			<dd:EventCode>74740</dd:EventCode>
+			<dd:TotalImpressions PEID="5000">0</dd:TotalImpressions>
+		</pldyn:Event>
+		<pldyn:Event>
+			<dd:SequenceNumber>1042</dd:SequenceNumber>
+			<dd:EventOccurrences>1</dd:EventOccurrences>
+			<dd:EventCode>69556</dd:EventCode>
+			<dd:TotalImpressions PEID="5000">0</dd:TotalImpressions>
+		</pldyn:Event>
+		<pldyn:Event>
+			<dd:SequenceNumber>1041</dd:SequenceNumber>
+			<dd:EventOccurrences>1</dd:EventOccurrences>
+			<dd:EventCode>69552</dd:EventCode>
+			<dd:TotalImpressions PEID="5000">0</dd:TotalImpressions>
+		</pldyn:Event>
+		<pldyn:Event>
+			<dd:SequenceNumber>1040</dd:SequenceNumber>
+			<dd:EventOccurrences>1</dd:EventOccurrences>
+			<dd:EventCode>69556</dd:EventCode>
+			<dd:TotalImpressions PEID="5000">0</dd:TotalImpressions>
+		</pldyn:Event>
+		<pldyn:Event>
+			<dd:SequenceNumber>1039</dd:SequenceNumber>
+			<dd:EventOccurrences>1</dd:EventOccurrences>
+			<dd:EventCode>69552</dd:EventCode>
+			<dd:TotalImpressions PEID="5000">0</dd:TotalImpressions>
+		</pldyn:Event>
+	</pldyn:EventLog>
+	<pldyn:ErrorLog> 
+#0Error Code: B8210B08
+File: .
+Line:  0
+Type:ASSERT_TYPE_MEM
+Page:     66
+SUB TYPE: 8
+EXECUTION ADDRESS: A0210B08
+
+#1Error Code: B8210B08
+File: .
+Line:  0
+Type:ASSERT_TYPE_MEM
+Page:     66
+SUB TYPE: 8
+EXECUTION ADDRESS: A0210B08
+
+#2Error Code: B8210B08
+File: .
+Line:  0
+Type:ASSERT_TYPE_MEM
+Page:     64
+SUB TYPE: 8
+EXECUTION ADDRESS: A0210B08
+
+#3Error Code: B8210B08
+File: .
+Line:  0
+Type:ASSERT_TYPE_MEM
+Page:     60
+SUB TYPE: 8
+EXECUTION ADDRESS: A0210B08
+
+#4Error Code: B8210A74
+File: .
+Line:  0
+Type:ASSERT_TYPE_MEM
+Page:     56
+SUB TYPE: 8
+EXECUTION ADDRESS: A0210A74
+</pldyn:ErrorLog>
+</pldyn:ProductLogsDyn>

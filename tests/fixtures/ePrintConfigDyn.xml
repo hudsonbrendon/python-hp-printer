@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!---->
+<ep:ePrintConfigDyn xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:ep="http://www.hp.com/schemas/imaging/con/eprint/2010/04/30" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/eprint/2010/04/30 ../../schemas/ePrintConfigDyn.xsd">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.1073</dd:Revision>
+		<dd:Date>2016-07-27</dd:Date>
+	</dd:Version>
+	<ep:CloudConfiguration>
+		<ep:EmailService>enabled</ep:EmailService>
+		<ep:MobileAppsService>enabled</ep:MobileAppsService>
+	</ep:CloudConfiguration>
+	<ep:RegistrationState>registered</ep:RegistrationState>
+	<ep:SignalingConnectionState>connected</ep:SignalingConnectionState>
+	<ep:CloudServicesSwitch>
+		<ep:Status>enabled</ep:Status>
+	</ep:CloudServicesSwitch>
+	<ep:RegistrationDetails>
+		<ep:RegistrationStepCompleted>capabilitiesUpload</ep:RegistrationStepCompleted>
+		<ep:PlatformIdentifier>gen2</ep:PlatformIdentifier>
+	</ep:RegistrationDetails>
+</ep:ePrintConfigDyn>

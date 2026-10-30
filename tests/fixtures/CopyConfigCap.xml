@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  THIS DATA SUBJECT TO DISCLAIMER(S)INCLUDED WITH THE PRODUCT OF ORIGIN. -->
+<cpcfgcap:CopyConfigCap xmlns:cpcfgcap="http://www.hp.com/schemas/imaging/con/ledm/cpcfgcap/2008/05/05" xmlns:cpcfgdyn="http://www.hp.com/schemas/imaging/con/ledm/cpcfgdyn/2008/05/05" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:copy="http://www.hp.com/schemas/imaging/con/copy/2008/07/07" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/cpcfgcap/2008/05/05 ../schemas/CopyConfigCap.xsd">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.122</dd:Revision>
+		<dd:Date>2011-10-18</dd:Date>
+	</dd:Version>
+	<cpcfgcap:DefaultLighterDarkerSupport elementXPath="cpcfgdyn:CopyConfigDyn/copy:DefaultLighterDarker" typeof="dd:Int" min="0" max="8" step="1" access="readWrite"></cpcfgcap:DefaultLighterDarkerSupport>
+	<cpcfgcap:DefaultMediaSizeNameSupport access="readWrite">
+		<dd:MediaSizeName>na_executive_7.25x10.5in</dd:MediaSizeName>
+		<dd:MediaSizeName>na_letter_8.5x11in</dd:MediaSizeName>
+		<dd:MediaSizeName>na_legal_8.5x14in</dd:MediaSizeName>
+		<dd:MediaSizeName>na_govt-letter_8x10in</dd:MediaSizeName>
+		<dd:MediaSizeName>iso_a5_148x210mm</dd:MediaSizeName>
+		<dd:MediaSizeName>iso_a4_210x297mm</dd:MediaSizeName>
+		<dd:MediaSizeName>custom</dd:MediaSizeName>
+		<dd:MediaSizeName>jis_b5_182x257mm</dd:MediaSizeName>
+		<dd:MediaSizeName>jpn_hagaki_100x148mm</dd:MediaSizeName>
+		<dd:MediaSizeName>iso_a6_105x148mm</dd:MediaSizeName>
+		<dd:MediaSizeName>na_index-4x6_4x6in</dd:MediaSizeName>
+		<dd:MediaSizeName>na_index-5x8_5x8in</dd:MediaSizeName>
+		<dd:MediaSizeName>na_number-10_4.125x9.5in</dd:MediaSizeName>
+		<dd:MediaSizeName>iso_dl_110x220mm</dd:MediaSizeName>
+		<dd:MediaSizeName>iso_c6_114x162mm</dd:MediaSizeName>
+		<dd:MediaSizeName>jpn_chou3_120x235mm</dd:MediaSizeName>
+		<dd:MediaSizeName>jpn_chou4_90x205mm</dd:MediaSizeName>
+		<dd:MediaSizeName>om_photo_89x127mm</dd:MediaSizeName>
+		<dd:MediaSizeName>custom_photo-2l-size-card_127x178mm</dd:MediaSizeName>
+		<dd:MediaSizeName>na_5x7_5x7in</dd:MediaSizeName>
+		<dd:MediaSizeName>iso_b5_176x250mm</dd:MediaSizeName>
+		<dd:MediaSizeName>om_small-photo_100x150mm</dd:MediaSizeName>
+	</cpcfgcap:DefaultMediaSizeNameSupport>
+	<cpcfgcap:DefaultMediaTypeSupport access="readWrite">
+		<dd:MediaType>plain</dd:MediaType>
+		<dd:MediaType>photoStandard</dd:MediaType>
+		<dd:MediaType>specialtyGlossy</dd:MediaType>
+		<dd:MediaType>specialtyMatte</dd:MediaType>
+		<dd:MediaType>matteBrochure</dd:MediaType>
+		<dd:MediaType>photoOther</dd:MediaType>
+		<dd:MediaType>matteInkjet</dd:MediaType>
+		<dd:MediaType>specialtyGlossyInkjet</dd:MediaType>
+		<dd:MediaType>lightWeight</dd:MediaType>
+	</cpcfgcap:DefaultMediaTypeSupport>
+	<cpcfgcap:DefaultNumberOfCopiesSupport elementXPath="cpcfgdyn:CopyConfigDyn/copy:DefaultNumberOfCopies" typeof="dd:Int" min="1" max="9" step="1" access="readWrite"></cpcfgcap:DefaultNumberOfCopiesSupport>
+	<cpcfgcap:DefaultReduceEnlargeSupport access="readWrite">
+		<copy:DefaultReduceEnlarge>original</copy:DefaultReduceEnlarge>
+		<copy:DefaultReduceEnlarge>fitToPage</copy:DefaultReduceEnlarge>
+		<copy:DefaultReduceEnlarge>custom</copy:DefaultReduceEnlarge>
+	</cpcfgcap:DefaultReduceEnlargeSupport>
+	<cpcfgcap:DefaultReduceEnlargeCustomSupport elementXPath="cpcfgdyn:CopyConfigDyn/copy:DefaultReduceEnlargeCustom" typeof="dd:Int" min="25" max="400" step="1" access="readWrite"></cpcfgcap:DefaultReduceEnlargeCustomSupport>
+	<cpcfgcap:DefaultTraySelectSupport access="readWrite">
+		<dd:InputBin>Tray1</dd:InputBin>
+	</cpcfgcap:DefaultTraySelectSupport>
+	<cpcfgcap:DefaultCopyQuality access="readWrite">
+		<copy:DefaultCopyQuality>best</copy:DefaultCopyQuality>
+		<copy:DefaultCopyQuality>normal</copy:DefaultCopyQuality>
+	</cpcfgcap:DefaultCopyQuality>
+	<cpcfgcap:DefaultMarginOffSupport access="readWrite">
+		<copy:DefaultMarginOff>disabled</copy:DefaultMarginOff>
+		<copy:DefaultMarginOff>enabled</copy:DefaultMarginOff>
+	</cpcfgcap:DefaultMarginOffSupport>
+	<cpcfgcap:CopySidesSupport access="readWrite">
+		<dd:CopySides>simplexToSimplex</dd:CopySides>
+	</cpcfgcap:CopySidesSupport>
+	<cpcfgcap:DefaultOutputTypeSupport access="readWrite">
+		<cpcfgcap:DefaultOutputType>monochrome</cpcfgcap:DefaultOutputType>
+		<cpcfgcap:DefaultOutputType>color</cpcfgcap:DefaultOutputType>
+	</cpcfgcap:DefaultOutputTypeSupport>
+	<cpcfgcap:DefaultInputSourceSupport access="readWrite">
+		<cpcfgcap:DefaultInputSource>Flatbed</cpcfgcap:DefaultInputSource>
+	</cpcfgcap:DefaultInputSourceSupport>
+</cpcfgcap:CopyConfigCap>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  THIS DATA SUBJECT TO DISCLAIMER(S)INCLUDED WITH THE PRODUCT OF ORIGIN. -->
+<fwucap:FirmwareUpdateCap xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/firmwareupdatecap/2010/12/12 ../../schemas/FirmwareUpdateCap.xsd" xmlns:fwucap="http://www.hp.com/schemas/imaging/con/ledm/firmwareupdatecap/2010/12/12" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<fwucap:FirmwareUpdateSupport>
+		<fwucap:FirmwareUpdate>
+			<fwucap:Class>FWUpdateJob</fwucap:Class>
+		</fwucap:FirmwareUpdate>
+		<fwucap:FirmwareUpdate>
+			<fwucap:Class>WebFWUpdate</fwucap:Class>
+			<fwucap:ConfigSupport>
+				<fwucap:AutomaticCheckSupport access="readOnly">
+					<fwucap:AutomaticCheck>disabled</fwucap:AutomaticCheck>
+					<fwucap:AutomaticCheck>enabled</fwucap:AutomaticCheck>
+				</fwucap:AutomaticCheckSupport>
+				<fwucap:AutomaticUpdateSupport access="readWrite">
+					<fwucap:AutomaticUpdate>disabled</fwucap:AutomaticUpdate>
+					<fwucap:AutomaticUpdate>enabled</fwucap:AutomaticUpdate>
+				</fwucap:AutomaticUpdateSupport>
+			</fwucap:ConfigSupport>
+			<fwucap:StateSupport>
+				<fwucap:StatusSupport access="readOnly">
+					<fwucap:Status>available</fwucap:Status>
+					<fwucap:Status>cancelling</fwucap:Status>
+					<fwucap:Status>checkFailed</fwucap:Status>
+					<fwucap:Status>checking</fwucap:Status>
+					<fwucap:Status>downloadFailed</fwucap:Status>
+					<fwucap:Status>downloading</fwucap:Status>
+					<fwucap:Status>idle</fwucap:Status>
+					<fwucap:Status>installFailed</fwucap:Status>
+					<fwucap:Status>installPreparation</fwucap:Status>
+					<fwucap:Status>installReady</fwucap:Status>
+					<fwucap:Status>installSuccess</fwucap:Status>
+					<fwucap:Status>notAvailable</fwucap:Status>
+					<fwucap:Status>installing</fwucap:Status>
+				</fwucap:StatusSupport>
+				<fwucap:TargetFWVersionSupport>
+					<fwucap:RevisionSupport typeof="String" length="0" access="readOnly" elementXPath="String"></fwucap:RevisionSupport>
+					<fwucap:DateSupport typeof="String" length="0" access="readOnly" elementXPath="String"></fwucap:DateSupport>
+				</fwucap:TargetFWVersionSupport>
+				<fwucap:ReasonSupport access="readOnly">
+					<fwucap:UpdateReason>defectFix</fwucap:UpdateReason>
+					<fwucap:UpdateReason>forCloudReg</fwucap:UpdateReason>
+					<fwucap:UpdateReason>getLatestFW</fwucap:UpdateReason>
+				</fwucap:ReasonSupport>
+				<fwucap:TypeSupport access="readOnly">
+					<fwucap:Type>mandatory</fwucap:Type>
+					<fwucap:Type>optional</fwucap:Type>
+					<fwucap:Type>recommended</fwucap:Type>
+				</fwucap:TypeSupport>
+				<fwucap:UpdateActionSupport access="writeOnly">
+					<fwucap:UpdateAction>check</fwucap:UpdateAction>
+					<fwucap:UpdateAction>cancel</fwucap:UpdateAction>
+					<fwucap:UpdateAction>start</fwucap:UpdateAction>
+					<fwucap:UpdateAction>reset</fwucap:UpdateAction>
+				</fwucap:UpdateActionSupport>
+				<fwucap:ErrorSupport access="readOnly">
+					<fwucap:Error>CommunicationError</fwucap:Error>
+					<fwucap:Error>DecompressError</fwucap:Error>
+					<fwucap:Error>InvalidBlob</fwucap:Error>
+					<fwucap:Error>InvalidFileFormat</fwucap:Error>
+					<fwucap:Error>NetworkError</fwucap:Error>
+					<fwucap:Error>NoBlobFound</fwucap:Error>
+					<fwucap:Error>NoUpdateFound</fwucap:Error>
+					<fwucap:Error>PreviousFailure</fwucap:Error>
+					<fwucap:Error>ProtocolError</fwucap:Error>
+					<fwucap:Error>ServerBusy</fwucap:Error>
+					<fwucap:Error>UnknownFailure</fwucap:Error>
+				</fwucap:ErrorSupport>
+				<fwucap:ProgressPercentage typeof="String" max="String" step="String" access="readOnly" elementXPath="String" min="String"></fwucap:ProgressPercentage>
+			</fwucap:StateSupport>
+			<fwucap:SessionURI typeof="String" length="0" access="readOnly" elementXPath="String"></fwucap:SessionURI>
+		</fwucap:FirmwareUpdate>
+	</fwucap:FirmwareUpdateSupport>
+	<fwucap:FirmwareModeSupport access="readWrite">
+		<fwucap:FirmwareMode>normal</fwucap:FirmwareMode>
+		<fwucap:FirmwareMode>recovery</fwucap:FirmwareMode>
+	</fwucap:FirmwareModeSupport>
+</fwucap:FirmwareUpdateCap>

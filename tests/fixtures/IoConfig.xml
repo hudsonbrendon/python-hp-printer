@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- THIS DATA SUBJECT TO DISCLAIMER(S) INCLUDED WITH THE PRODUCT OF ORIGIN. -->
+<io:IoConfig xmlns:io="http://www.hp.com/schemas/imaging/con/ledm/iomgmt/2008/11/30" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:dd3="http://www.hp.com/schemas/imaging/con/dictionaries/2009/04/06" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/iomgmt/2008/11/30 ../../schemas/IoMgmt.xsd">
+	<io:IoDeviceConfig>
+		<dd3:Hostname>MiWiFi-RM1800-srv</dd3:Hostname>
+		<dd3:DefaultHostname>HP502472</dd3:DefaultHostname>
+		<dd:CurrentHostnameConfigByMethod>default</dd:CurrentHostnameConfigByMethod>
+	</io:IoDeviceConfig>
+	<io:IoDeviceProtocolConfig>
+		<io:IPv4DomainName>
+			<dd3:DomainName></dd3:DomainName>
+		</io:IPv4DomainName>
+		<io:IPv6DomainName>
+			<dd3:DomainName></dd3:DomainName>
+		</io:IPv6DomainName>
+	</io:IoDeviceProtocolConfig>
+</io:IoConfig>

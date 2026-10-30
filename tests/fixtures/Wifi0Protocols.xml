@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- THIS DATA SUBJECT TO DISCLAIMER(S)INCLUDED WITH THE PRODUCT OF ORIGIN.  -->
+<io:Protocols xmlns:io="http://www.hp.com/schemas/imaging/con/ledm/iomgmt/2008/11/30" xmlns:map="http://www.hp.com/schemas/imaging/con/ledm/resourcemap/2009/01/27" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/iomgmt/2008/11/30 ../../schemas/IoMgmt.xsd">
+	<io:Protocol>
+		<dd:IPVersionSupport>ipv4</dd:IPVersionSupport>
+		<dd:IPv4>enabled</dd:IPv4>
+		<io:DNSConfigMethod>auto</io:DNSConfigMethod>
+		<dd:DNSServerIPAddress>192.168.31.1</dd:DNSServerIPAddress>
+		<dd:SecondaryDNSServerIPAddress>0.0.0.0</dd:SecondaryDNSServerIPAddress>
+		<dd:DHCPServerIPAddress>192.168.31.1</dd:DHCPServerIPAddress>
+		<io:WINSConfigMethod>auto</io:WINSConfigMethod>
+		<dd:WINSServerName>0.0.0.0</dd:WINSServerName>
+		<dd:SecondaryWINSServerName>0.0.0.0</dd:SecondaryWINSServerName>
+		<dd:DHCPT1>21595517</dd:DHCPT1>
+		<dd:DHCPT2>37795517</dd:DHCPT2>
+		<io:Addresses>
+			<io:IPv4Addresses>
+				<io:IPv4Address>
+					<dd:IPv4Address>192.168.31.12</dd:IPv4Address>
+					<dd:SubnetMask>255.255.255.0</dd:SubnetMask>
+					<dd:DefaultGateway>192.168.31.1</dd:DefaultGateway>
+					<dd:ConfigMethod>DHCPv4</dd:ConfigMethod>
+				</io:IPv4Address>
+			</io:IPv4Addresses>
+		</io:Addresses>
+	</io:Protocol>
+	<io:Protocol>
+		<dd:IPVersionSupport>ipv6</dd:IPVersionSupport>
+		<dd:IPv6>enabled</dd:IPv6>
+		<io:DNSConfigMethod>auto</io:DNSConfigMethod>
+		<io:Addresses>
+			<io:IPv6Addresses>
+				<io:IPv6Address>
+					<dd:IPv6Address>FE80::5E60:BAFF:FE50:2472</dd:IPv6Address>
+					<dd:IPAddressPrefixLength>64</dd:IPAddressPrefixLength>
+					<dd:IPConfigMethod>LINK_LOCAL</dd:IPConfigMethod>
+				</io:IPv6Address>
+				<io:IPv6Address>
+					<dd:IPv6Address>FD10:FEF3:869E:C4D0:5E60:BAFF:FE50:2472</dd:IPv6Address>
+					<dd:IPAddressPrefixLength>64</dd:IPAddressPrefixLength>
+					<dd:IPConfigMethod>STATELESS</dd:IPConfigMethod>
+				</io:IPv6Address>
+			</io:IPv6Addresses>
+		</io:Addresses>
+	</io:Protocol>
+</io:Protocols>

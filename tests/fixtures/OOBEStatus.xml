@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!---->
+<ob:OOBEStatus xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/oobe/2015/12/14 ../OOBE/OOBE.xsd" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:dd2="http://www.hp.com/schemas/imaging/con/dictionaries/2008/10/10" xmlns:ob="http://www.hp.com/schemas/imaging/con/ledm/oobe/2015/12/14" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ob:OOBECompleted>false</ob:OOBECompleted>
+	<ob:OOBEStage>
+		<ob:Name>languageConfig</ob:Name>
+		<ob:State>completed</ob:State>
+		<ob:Order>1</ob:Order>
+	</ob:OOBEStage>
+	<ob:OOBEStage>
+		<ob:Name>countryConfig</ob:Name>
+		<ob:State>completed</ob:State>
+		<ob:Order>2</ob:Order>
+	</ob:OOBEStage>
+	<ob:OOBEStage>
+		<ob:Name>loadMainTray</ob:Name>
+		<ob:State>completed</ob:State>
+		<ob:Order>3</ob:Order>
+	</ob:OOBEStage>
+	<ob:OOBEStage>
+		<ob:Name>insertInk</ob:Name>
+		<ob:State>completed</ob:State>
+		<ob:Order>4</ob:Order>
+	</ob:OOBEStage>
+</ob:OOBEStatus>

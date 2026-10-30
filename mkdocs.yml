@@ -1,0 +1,41 @@
+site_name: python-hp-printer
+site_url: https://hudsonbrendon.github.io/python-hp-printer/
+repo_url: https://github.com/hudsonbrendon/python-hp-printer
+repo_name: hudsonbrendon/python-hp-printer
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - scheme: slate
+      primary: blue
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+  features:
+    - navigation.sections
+    - content.code.copy
+nav:
+  - Home: index.md
+  - Usage: usage.md
+  - Protocol: protocol.md
+  - API: api.md
+  - Changelog: changelog.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            docstring_style: google
+            show_source: false
+            separate_signature: true
+            merge_init_into_class: true
+markdown_extensions:
+  - admonition
+  - tables
+  - pymdownx.superfences

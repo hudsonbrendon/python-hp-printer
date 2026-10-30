@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- THIS DATA SUBJECT TO DISCLAIMER(S)INCLUDED WITH THE PRODUCT OF ORIGIN. -->
+<ut:InternetConnectionStatus xsi:schemaLocation="http://www.hp.com/schemas/imaging/con/ledm/utilities/2013/05/03 ../../schemas/Utilities.xsd" xmlns:dd="http://www.hp.com/schemas/imaging/con/dictionaries/1.0/" xmlns:ut="http://www.hp.com/schemas/imaging/con/ledm/utilities/2013/05/03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dd:Version>
+		<dd:Revision>SVN-IPG-LEDM.644</dd:Revision>
+		<dd:Date>2013-06-10</dd:Date>
+	</dd:Version>
+	<ut:State>idle</ut:State>
+</ut:InternetConnectionStatus>
