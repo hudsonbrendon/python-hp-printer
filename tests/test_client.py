@@ -93,6 +93,11 @@ class FakePrinter:
                 return web.Response(body=b"{nope", content_type="application/json")
             if path == "/broken.xml":
                 return web.Response(body=b"<nope", content_type="text/xml")
+            if path == "/DevMgmt/SecurityDyn.xml":
+                auth = request.headers.get("Authorization")
+                if self.password and auth != _basic("admin", self.password):
+                    return web.Response(status=401)
+                return web.Response(body=b"<x/>", content_type="text/xml")
             if path == "/teapot":
                 return web.Response(status=418, body=b"short and stout")
             if path == f"{SCAN_JOB}/NextDocument":
@@ -387,6 +392,14 @@ async def test_write_requires_password(
         client._send_auth_over_http = True
         await client.set_power_save_timeout("10minutes")
         assert printer.requests[-1][1] == "/DevMgmt/ProductConfigDyn.xml"
+    async with make() as client:
+        assert await client.check_password() is None  # no password configured
+    async with make(password="wrong") as client:
+        client._send_auth_over_http = True
+        assert await client.check_password() is False
+    async with make(password="secret") as client:
+        client._send_auth_over_http = True
+        assert await client.check_password() is True
     # without the flag nothing is sent over http even when a password is known
     async with make(password="secret") as client:
         with pytest.raises(HPPrinterAuthenticationError, match="requires"):

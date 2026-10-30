@@ -69,6 +69,7 @@ from .const import (
     RES_PRODUCT_CONFIG_CAP,
     RES_PRODUCT_LOGS,
     RES_PRODUCT_STATUS,
+    RES_SECURITY,
     RES_USAGE,
     USER_AGENT,
     PrinterState,
@@ -415,6 +416,23 @@ class HPPrinter:
         if self.capabilities is None:  # pragma: no cover - discover() always sets it
             raise HPPrinterError("Capability discovery failed")
         return self.capabilities
+
+    async def check_password(self) -> bool | None:
+        """Verify the admin password against a protected LEDM resource.
+
+        Returns ``True`` when accepted, ``False`` when rejected and ``None``
+        when the printer has no password-protected resource to test against.
+        """
+        if not self.password:
+            return None
+        try:
+            # plain HTTP is redirected to HTTPS by the printer, then 401 without auth
+            await self._request("GET", RES_SECURITY, accept="text/xml")
+        except HPPrinterAuthenticationError:
+            return False
+        except HPPrinterNotSupportedError:
+            return None
+        return True
 
     # ------------------------------------------------------------------ #
     # LEDM getters
