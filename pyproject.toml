@@ -33,7 +33,7 @@ classifiers = [
   "Topic :: Printing",
   "Typing :: Typed",
 ]
-dependencies = ["aiohttp>=3.10", "aioipp>=0.20", "yarl>=1.9"]
+dependencies = ["aiohttp>=3.10", "aioipp>=0.19", "yarl>=1.9"]
 
 [project.urls]
 Homepage = "https://github.com/hudsonbrendon/python-hp-printer"

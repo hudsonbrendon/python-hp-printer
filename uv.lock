@@ -1215,7 +1215,7 @@ docs = [
 [package.metadata]
 requires-dist = [
     { name = "aiohttp", specifier = ">=3.10" },
-    { name = "aioipp", specifier = ">=0.20" },
+    { name = "aioipp", specifier = ">=0.19" },
     { name = "yarl", specifier = ">=1.9" },
 ]
 

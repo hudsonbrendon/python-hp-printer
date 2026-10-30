@@ -33,7 +33,7 @@ pip install python-hp-printer
 ```
 
 Requires Python 3.14+ (the version Home Assistant runs). Dependencies:
-`aiohttp`, `aioipp`, `yarl`.
+`aiohttp`, `aioipp` (>=0.19, the IPP library Home Assistant ships), `yarl`.
 
 ## Usage
 
