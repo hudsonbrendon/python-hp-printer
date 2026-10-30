@@ -4,6 +4,18 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## [0.1.1] - 2026-10-30
+
+### Fixed
+
+- IPP uses its own session without keep-alive (the printer stalls reused
+  connections on port 631 too).
+- Every request now sends `Connection: close`; HP's embedded HTTP server
+  returns stale or hung responses on reused keep-alive sockets.
+- Scanning at 300 dpi / PDF timed out: `NextDocument` now waits up to 120 s per
+  page (the scanner keeps the connection open while scanning) and a whole job
+  may take 5 minutes.
+
 ## [0.1.0] - 2026-10-30
 
 ### Added

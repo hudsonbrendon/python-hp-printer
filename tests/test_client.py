@@ -244,6 +244,8 @@ async def test_writes(fake: tuple[FakePrinter, Callable[..., HPPrinter]]) -> Non
     async with make() as client:
         await client.set_quiet_mode(True)  # CDM path, no password needed
         assert printer.quiet == "true"
+        refreshed = await client.update(include_jobs=False)
+        assert refreshed.settings is not None and refreshed.settings.quiet_mode is True
         await client.set_quiet_mode(False)
         assert printer.quiet == "false"
         await client.set_device_language("en")  # CDM control panel

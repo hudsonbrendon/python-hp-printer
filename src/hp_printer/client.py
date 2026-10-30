@@ -149,7 +149,8 @@ _PRODUCT_SETTING_TAGS: dict[str, tuple[str, str | None]] = {
 }
 
 _SCAN_POLL_INTERVAL = 1.0
-_SCAN_TIMEOUT = 180.0
+_SCAN_TIMEOUT = 300.0
+_SCAN_PAGE_TIMEOUT = 120.0
 _SCAN_RETRY_503 = 30
 
 
@@ -198,6 +199,7 @@ class HPPrinter:
         self.capabilities: Capabilities | None = None
         self._scanner_caps: ScannerCapabilities | None = None
         self._ipp: IppClient | None = None
+        self._ipp_session: aiohttp.ClientSession | None = None
 
     # ------------------------------------------------------------------ #
     # Session / transport
@@ -208,28 +210,37 @@ class HPPrinter:
         if self._session is None or self._session.closed:
             self._session = aiohttp.ClientSession()
             self._close_session = True
-            self._ipp = None
         return self._session
 
     @property
     def ipp(self) -> IppClient:
-        """IPP client sharing this client's HTTP session."""
-        session = self.session
+        """IPP client on a dedicated session without keep-alive.
+
+        HP's IPP server hangs on reused connections just like its HTTP
+        server, and ``pyipp`` cannot be told to close them, so IPP gets its
+        own session with ``force_close``.
+        """
         if self._ipp is None:
+            self._ipp_session = aiohttp.ClientSession(
+                connector=aiohttp.TCPConnector(force_close=True)
+            )
             self._ipp = IppClient(
                 self.host,
                 port=self.ipp_port,
-                session=session,
+                session=self._ipp_session,
                 request_timeout=self.request_timeout,
             )
         return self._ipp
 
     async def close(self) -> None:
-        """Close the session if this client created it."""
+        """Close the IPP session and the HTTP session if this client created it."""
+        if self._ipp_session is not None:
+            await self._ipp_session.close()
+            self._ipp_session = None
+            self._ipp = None
         if self._session is not None and self._close_session:
             await self._session.close()
             self._session = None
-            self._ipp = None
 
     async def __aenter__(self) -> Self:
         """Async context manager entry."""
@@ -256,6 +267,7 @@ class HPPrinter:
         content_type: str | None = None,
         accept: str = "*/*",
         secure: bool = False,
+        read_timeout: float | None = None,
         _redirected: bool = False,
     ) -> tuple[int, bytes, dict[str, str]]:
         """Perform a request and return ``(status, body, headers)``.
@@ -264,7 +276,9 @@ class HPPrinter:
         for the EWS admin realm and maps transport errors to library errors.
         """
         url = self.url(path, secure=secure)
-        headers = {"User-Agent": USER_AGENT, "Accept": accept}
+        # HP's embedded server mishandles idle keep-alive sockets (stale or
+        # hung responses), so every request uses a fresh connection.
+        headers = {"User-Agent": USER_AGENT, "Accept": accept, "Connection": "close"}
         if content_type:
             headers["Content-Type"] = content_type
         kwargs: dict[str, Any] = {
@@ -285,7 +299,7 @@ class HPPrinter:
         try:
             async with (
                 self._semaphore,
-                asyncio.timeout(self.request_timeout),
+                asyncio.timeout(read_timeout or self.request_timeout),
                 self.session.request(method, url, **kwargs) as response,
             ):
                 body = await response.read()
@@ -310,6 +324,7 @@ class HPPrinter:
                     content_type=content_type,
                     accept=accept,
                     secure=True,
+                    read_timeout=read_timeout,
                     _redirected=True,
                 )
         if status == 401:
@@ -625,8 +640,12 @@ class HPPrinter:
         retries_503 = 0
         while True:
             try:
+                # the scanner holds the connection open until the page is ready
                 status, body, _ = await self._request(
-                    "GET", f"{job_path}/NextDocument", accept="*/*"
+                    "GET",
+                    f"{job_path}/NextDocument",
+                    accept="*/*",
+                    read_timeout=_SCAN_PAGE_TIMEOUT,
                 )
             except HPPrinterNotSupportedError:
                 # 404 after at least one page = no more documents.
@@ -802,6 +821,14 @@ class HPPrinter:
         if include_network or data.network is None:
             tasks["network"] = self.get_network()
         await self._run_tasks(data, tasks)
+        if data.settings is not None and caps.has_cdm:
+            # CDM is the authoritative (and password-free) source for quiet mode;
+            # the LEDM document can lag behind for a few seconds after a write.
+            mode = await self._optional_json(RES_CDM_PRINT_MODE)
+            if isinstance(mode, dict) and "quietPrintModeEnabled" in mode:
+                data.settings.quiet_mode = (
+                    str(mode["quietPrintModeEnabled"]).lower() == "true"
+                )
         if data.consumables is not None:
             usage_node = await self._optional_xml(RES_USAGE)
             if usage_node is not None:
